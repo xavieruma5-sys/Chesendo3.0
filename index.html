@@ -9,6 +9,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+/* =========================
+GLOBAL SETTINGS
+========================= */
 
 *{
     margin:0;
@@ -18,13 +21,35 @@
     scroll-behavior:smooth;
 }
 
+html,
 body{
-    background:#050505;
-    color:white;
+    width:100%;
     overflow-x:hidden;
 }
 
-/* NAVBAR */
+body{
+    background:#050505;
+    color:white;
+}
+
+/* =========================
+IMAGES & VIDEOS
+========================= */
+
+img{
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+
+video,
+iframe{
+    max-width:100%;
+}
+
+/* =========================
+NAVBAR
+========================= */
 
 nav{
     width:100%;
@@ -34,6 +59,7 @@ nav{
     align-items:center;
     position:fixed;
     top:0;
+    left:0;
     z-index:1000;
     background:rgba(0,0,0,0.35);
     backdrop-filter:blur(15px);
@@ -52,10 +78,8 @@ nav{
 nav ul{
     display:flex;
     list-style:none;
-}
-
-nav ul li{
-    margin-left:35px;
+    gap:25px;
+    flex-wrap:wrap;
 }
 
 nav ul li a{
@@ -69,7 +93,9 @@ nav ul li a:hover{
     color:#c8ff00;
 }
 
-/* HERO */
+/* =========================
+HERO SECTION
+========================= */
 
 .hero{
     min-height:100vh;
@@ -77,6 +103,7 @@ nav ul li a:hover{
     display:flex;
     justify-content:space-between;
     align-items:center;
+    gap:50px;
 
     background:
     linear-gradient(rgba(0,0,0,0.82), rgba(0,0,0,0.88)),
@@ -85,7 +112,6 @@ nav ul li a:hover{
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
-    background-attachment:fixed;
 }
 
 .hero-left{
@@ -114,6 +140,7 @@ nav ul li a:hover{
 .hero-buttons{
     display:flex;
     gap:20px;
+    flex-wrap:wrap;
 }
 
 .btn-main{
@@ -172,10 +199,14 @@ nav ul li a:hover{
     line-height:1.9;
 }
 
-/* SECTION */
+/* =========================
+SECTIONS
+========================= */
 
 section{
     padding:120px 8%;
+    width:100%;
+    overflow:hidden;
 }
 
 .section-title{
@@ -195,7 +226,9 @@ section{
     max-width:900px;
 }
 
-/* SERVICES */
+/* =========================
+SERVICES
+========================= */
 
 .services-grid{
     margin-top:60px;
@@ -227,9 +260,11 @@ section{
     line-height:1.8;
 }
 
-/* JECT */
+/* =========================
+PROJECT
+========================= */
 
-.ject-box{
+.project-box{
     margin-top:50px;
     padding:60px;
     border-radius:30px;
@@ -253,7 +288,9 @@ section{
     margin-bottom:35px;
 }
 
-/* CONTACT */
+/* =========================
+CONTACT
+========================= */
 
 .contact-grid{
     margin-top:50px;
@@ -278,133 +315,9 @@ section{
     line-height:2;
 }
 
-/* FOOTER */
-
-footer{
-    padding:40px;
-    text-align:center;
-    color:#999;
-    border-top:1px solid rgba(255,255,255,0.08);
-}
-
-
-/* MOBILE */
-
-@media(max-width:980px){
-
-.hero{
-    flex-direction:column;
-    gap:60px;
-}
-
-.hero-left,
-.hero-right{
-    width:100%;
-}
-
-.hero-left h1{
-    font-size:50px;
-}
-
-nav{
-    flex-direction:column;
-}
-
-nav ul{
-    margin-top:20px;
-    flex-wrap:wrap;
-    justify-content:center;
-}
-
-}
-
-/* AI MENTOR BOX */
-
-.mentor-box{
-    margin-top:50px;
-    background:rgba(255,255,255,0.03);
-    border:1px solid rgba(255,255,255,0.08);
-    padding:40px;
-    border-radius:25px;
-    text-align:left;
-}
-
-.mentor-box h3{
-    font-size:30px;
-    margin-bottom:25px;
-    color:#c8ff00;
-}
-
-.mentor-box p{
-    color:#bdbdbd;
-    line-height:2;
-    font-size:17px;
-}
-
-/* VIDEO SECTION */
-
-.video-section{
-    padding:120px 8%;
-    text-align:center;
-    background:#050505;
-}
-
-.video-section h2{
-    font-size:50px;
-    margin-bottom:40px;
-    color:#c8ff00;
-}
-
-.video-container{
-    width:100%;
-    max-width:1000px;
-    margin:auto;
-    border-radius:25px;
-    overflow:hidden;
-    box-shadow:0 0 40px rgba(0,0,0,0.5);
-}
-
-.video-container iframe{
-    width:100%;
-    height:550px;
-    border:none;
-    border-radius:25px;
-    display:block;
-}
-
-.video-section p{
-    margin-top:30px;
-    color:#bdbdbd;
-    line-height:1.9;
-    font-size:17px;
-}
-/* FLOATING WHATSAPP BUTTON */
-
-.whatsapp-float{
-    position:fixed;
-    width:65px;
-    height:65px;
-    bottom:25px;
-    right:25px;
-    background:#25D366;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    box-shadow:0 0 25px rgba(0,0,0,0.4);
-    z-index:9999;
-    transition:0.3s ease;
-}
-
-.whatsapp-float:hover{
-    transform:scale(1.1);
-}
-
-.whatsapp-float img{
-    width:35px;
-    height:35px;
-}
-/* AI MENTOR SECTION */
+/* =========================
+AI MENTOR SECTION
+========================= */
 
 .ai-mentor-section{
     padding:120px 8%;
@@ -420,13 +333,13 @@ nav ul{
 .ai-mentor-wrapper{
     max-width:1200px;
     margin:auto;
+    text-align:center;
 }
 
 .ai-mentor-section h2{
     font-size:60px;
     margin-bottom:30px;
     color:#c8ff00;
-    text-align:center;
 }
 
 .mentor-intro{
@@ -477,28 +390,9 @@ nav ul{
     text-align:center;
 }
 
-.ai-mentor-section .btn-main{
-    display:inline-block;
-    margin:auto;
-}
-
-.ai-mentor-wrapper{
-    text-align:center;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-.ai-mentor-section h2{
-    font-size:42px;
-}
-
-
-.mentor-intro,
-.mentor-text{
-    font-size:16px;
-}
+/* =========================
+VIDEO SECTION
+========================= */
 
 .video-section{
     padding:120px 8%;
@@ -513,17 +407,25 @@ nav ul{
 }
 
 .video-container{
+    position:relative;
     width:100%;
     max-width:1000px;
     margin:auto;
-    border-radius:25px;
+    padding-bottom:56.25%;
+    height:0;
     overflow:hidden;
+    border-radius:25px;
     box-shadow:0 0 40px rgba(0,0,0,0.5);
 }
 
+.video-container iframe,
 .video-container video{
+    position:absolute;
+    top:0;
+    left:0;
     width:100%;
-    display:block;
+    height:100%;
+    border:none;
     border-radius:25px;
 }
 
@@ -534,6 +436,229 @@ nav ul{
     font-size:17px;
 }
 
+/* =========================
+WHATSAPP FLOAT
+========================= */
+
+.whatsapp-float{
+    position:fixed;
+    width:65px;
+    height:65px;
+    bottom:25px;
+    right:25px;
+    background:#25D366;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 0 25px rgba(0,0,0,0.4);
+    z-index:9999;
+    transition:0.3s ease;
+}
+
+.whatsapp-float:hover{
+    transform:scale(1.1);
+}
+
+.whatsapp-float img{
+    width:35px;
+    height:35px;
+}
+
+/* =========================
+FOOTER
+========================= */
+
+footer{
+    padding:40px;
+    text-align:center;
+    color:#999;
+    border-top:1px solid rgba(255,255,255,0.08);
+}
+
+/* =========================
+TABLET
+========================= */
+
+@media(max-width:980px){
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+}
+
+.hero-left,
+.hero-right{
+    width:100%;
+}
+
+.hero-left h1{
+    font-size:50px;
+}
+
+.hero-buttons{
+    justify-content:center;
+}
+
+nav{
+    flex-direction:column;
+    gap:20px;
+}
+
+nav ul{
+    justify-content:center;
+}
+
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media(max-width:768px){
+
+.hero{
+    padding-top:220px;
+}
+
+.hero-left h1{
+    font-size:42px;
+    line-height:1.2;
+}
+
+.section-title{
+    font-size:42px;
+}
+
+.ai-mentor-section h2,
+.video-section h2{
+    font-size:42px;
+}
+
+.mentor-intro,
+.mentor-text,
+.hero-left p,
+.section-text{
+    font-size:16px;
+}
+
+.hero-buttons{
+    flex-direction:column;
+}
+
+.btn-main,
+.btn-secondary{
+    width:100%;
+    text-align:center;
+}
+
+nav{
+    padding:20px 5%;
+}
+
+nav ul{
+    gap:15px;
+}
+
+.project-box{
+    padding:35px;
+}
+
+
+/* =========================
+EXTRA SMALL DEVICES - 320PX
+========================= */
+
+@media(max-width:320px){
+
+nav{
+    padding:15px 4%;
+}
+
+.logo{
+    font-size:22px;
+    text-align:center;
+}
+
+nav ul{
+    gap:10px;
+    justify-content:center;
+}
+
+nav ul li a{
+    font-size:13px;
+}
+
+.hero{
+    padding:210px 5% 80px;
+}
+
+.hero-left h1{
+    font-size:28px;
+    line-height:1.2;
+}
+
+.hero-left p{
+    font-size:14px;
+    line-height:1.7;
+}
+
+.section-title,
+.ai-mentor-section h2,
+.video-section h2{
+    font-size:28px;
+    line-height:1.2;
+}
+
+.section-text,
+.video-section p,
+.mentor-intro,
+.mentor-text{
+    font-size:14px;
+    line-height:1.8;
+}
+
+.hero-buttons{
+    width:100%;
+    gap:15px;
+}
+
+.btn-main,
+.btn-secondary{
+    width:100%;
+    padding:15px 20px;
+    font-size:14px;
+}
+
+.hero-card,
+.service-card,
+.contact-card,
+.mentor-card,
+.project-box{
+    padding:25px;
+}
+
+section{
+    padding:90px 5%;
+}
+
+.video-container{
+    border-radius:18px;
+}
+
+.whatsapp-float{
+    width:52px;
+    height:52px;
+    bottom:18px;
+    right:18px;
+}
+
+.whatsapp-float img{
+    width:26px;
+    height:26px;
+}
+
+}
 }
 </style>
 </head>
